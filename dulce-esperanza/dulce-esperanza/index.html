@@ -66,6 +66,9 @@
             <div class="delivery-info">
                 <p>Selecciona tus productos favoritos y agrégalos al carrito. Luego procede al checkout para completar tu pedido.</p>
                 <p>Recuerda que puedes programar entregas recurrentes para tus productos favoritos.</p>
+                <button class="checkout-btn" onclick="proceedToCheckout()" style="margin-top: 20px; padding: 15px 30px; font-size: 1.1rem;">
+                    <i class="fas fa-shopping-cart"></i> Continuar con la Compra
+                </button>
             </div>
         </section>
 
@@ -84,6 +87,37 @@
             </div>
         </section>
     </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Los items del carrito se cargarán dinámicamente -->
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0</span>
+            </div>
+            <div class="summary-row">
+                <span>Envío:</span>
+                <span>Gratis</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="total">$0</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                <i class="fas fa-check"></i> Confirmar Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
     <!-- Footer -->
     <footer>
